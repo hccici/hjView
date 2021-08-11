@@ -9,6 +9,3 @@ export default {
   name: 'HjButton'
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
