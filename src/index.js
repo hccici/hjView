@@ -1,6 +1,6 @@
 // 导入组件
-import HjButton from '../packages/Button'
-import HjIcon from '../packages/Icon'
+import HjButton from './components/Button'
+import HjIcon from './components/Icon'
 
 // 组件列表
 const components = [
