@@ -1,13 +1,22 @@
-const path = require('path');
+const path = require('path')
 function resolve(dir) {
   return path.join(__dirname, dir)//path.join(__dirname)设置绝对路径
 }
-console.log(resolve('docs/md-loader/index.js'))
+const _pages = {
+  index: 'docs/main.js',
+  examples: 'examples/main.js'
+}
+function getPages() {
+  const pagekeys = process.env.VUE_APP_PAGE.split(',')
+  const pages = {}
+  pagekeys.forEach(key => {
+    pages[key] = _pages[key]
+  })
+  return pages
+}
+
 module.exports = {
-  pages: {
-    index: 'examples/main.js', // 指定webpack编译入口
-    docs: 'docs/main.js'
-  },
+  pages: getPages(),
   // 扩展 webpack 配置，使其能够编译md文件
   configureWebpack: {
     module: {
