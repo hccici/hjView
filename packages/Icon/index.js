@@ -4,8 +4,8 @@ HjIcon.setSvgSymbol = function () {
   import('./iconfont');
 }
 HjIcon.install = function (Vue) {
-  Vue.component(HjIcon.name, HjIcon)
-  HjIcon.setSvgSymbol()
+  Vue.component(HjIcon.name, HjIcon);
+  HjIcon.setSvgSymbol();
 }
 
 export default HjIcon;
