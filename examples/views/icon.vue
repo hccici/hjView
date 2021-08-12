@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-for="icon of arr">
-      <hj-icon :key="icon" :icon="icon" class="aa"></hj-icon>
+      <hj-icon :key="icon" :icon="icon" size="32"></hj-icon>
     </template>
   </div>
 </template>
@@ -15,8 +15,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.aa {
-  font-size: 16px;
-}
-</style>

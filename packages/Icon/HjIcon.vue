@@ -1,5 +1,5 @@
 <template>
-  <svg class="hj-icon" aria-hidden="true" v-on="$listeners">
+  <svg class="hj-icon" aria-hidden="true" v-on="$listeners" :style="style">
     <use :xlink:href="iconName" />
   </svg>
 </template>
@@ -12,14 +12,22 @@ export default {
       type: String,
       required: true
     },
-    className: {
-      type: String,
-      default: ''
-    }
+    size: [Number, String],
+    color: String
   },
   computed: {
     iconName() {
       return `#icon-${this.icon}`
+    },
+    style() {
+      let style = {}
+      if (this.size) {
+        style['font-size'] = `${this.size}px`;
+      }
+      if (this.color) {
+        style['color'] = this.color
+      }
+      return style
     }
   }
 }
