@@ -1,18 +1,30 @@
 
 ## Icon 图标
 
-提供了一套常用的图标集合。
+使用了svg作为图标。内置了一套比较简洁的图标库，你也可以自己去[iconfont](https://www.iconfont.cn/)下载，并扩展。
 
 ### 使用方法
 
-直接通过设置类名为 `el-icon-iconName` 来使用即可。例如：
+直接通过设置类名为来使用即可。例如：
 
 :::demo
 ```html
-<hj-icon  icon="check-circle" size="32"></hj-icon>
+<template>
+  <hj-icon icon="mima" size="32"></hj-icon>
+  <hj-icon icon="xiaoxi" size="32"></hj-icon>
+  <hj-icon icon="biaoqian" size="32"></hj-icon>
+</template>
 ```
 :::
 
 ### 图标集合
 
+<ul class="icon-list">
+  <li v-for="name in $icon" :key="name">
+    <span>
+      <hj-icon :icon="name" size="32"></hj-icon>
+      <span class="icon-name">{{name}}</span>
+    </span>
+  </li>
+</ul>
 

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import app from './app'
 import router from './router';
+import './styles/index.scss';
 Vue.config.productionTip = false
 // 全局注册组件
 import HJView from '../src/index';

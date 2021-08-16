@@ -14,7 +14,7 @@ const install = function (Vue) {
   components.forEach(component => {
     Vue.component(component.name, component)
     if (component.name === 'HjIcon') {
-      component.setSvgSymbol()
+      component.setSvgSymbol(Vue)
     }
   })
 }
