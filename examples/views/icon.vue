@@ -10,7 +10,28 @@
 export default {
   data() {
     return {
-      arr: ['check-circle', 'left-circle', 'down-circle', 'edit-square']
+      arr: [
+        "mima",
+        "youjian2",
+        "youjian1",
+        "zhuye",
+        "ziyuangongxiang",
+        "shoucang",
+        "yonghufankui",
+        "wenjian",
+        "gongzuotaiguanli",
+        "youjian3",
+        "zhuye2",
+        "shanchu",
+        "rili",
+        "tongzhi",
+        "sousuo",
+        "bianji",
+        "fujian",
+        "liucheng",
+        "xiaoxi",
+        "biaoqian"
+      ]
     }
   }
 }

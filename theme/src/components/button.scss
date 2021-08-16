@@ -1,3 +1,48 @@
 .hj-button {
   display: inline-block;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &__default {
+    border: 1px solid #409eff;
+    background-color: #409eff;
+    color: #ffffff;
+  }
+  &__success {
+    border: 1px solid #67c23a;
+    background-color: #67c23a;
+    color: #ffffff;
+  }
+  &__warning {
+    border: 1px solid #e6a23c;
+    background-color: #e6a23c;
+    color: #ffffff;
+  }
+  &__danger {
+    border: 1px solid #f56c6c;
+    background-color: #f56c6c;
+    color: #ffffff;
+  }
+  &__small {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  &__middle {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+  &__large {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  &__right {
+    border-radius: 0;
+  }
+  &__semicircle {
+    border-radius: 4px;
+  }
+  &__circle {
+    border-radius: 20px;
+  }
 }

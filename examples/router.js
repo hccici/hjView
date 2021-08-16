@@ -15,6 +15,7 @@ files.keys().forEach(key => {
 })
 
 const router = new VueRouter({
+  base: '/examples',
   mode: 'history',
   routes
 })

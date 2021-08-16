@@ -7,6 +7,10 @@ export const _routes = {
     {
       name: 'Icon 图标',
       key: 'icon'
+    },
+    {
+      name: 'Button 按钮',
+      key: 'button'
     }
   ]
 }
