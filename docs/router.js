@@ -33,6 +33,9 @@ routes.unshift({
   component: () => import(`./documents/index.md`)
 })
 const router = new VueRouter({
+  base: process.env.NODE_ENV === 'production'
+    ? '/hjView'
+    : '/',
   mode: 'history',
   routes
 })
