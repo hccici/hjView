@@ -10,7 +10,7 @@
 :::demo
 ```html
 <template>
-  <hj-icon icon="mima" size="32"></hj-icon>
+  <hj-icon icon="mima" size="32" color="red"></hj-icon>
   <hj-icon icon="xiaoxi" size="32"></hj-icon>
   <hj-icon icon="biaoqian" size="32"></hj-icon>
 </template>
@@ -20,11 +20,9 @@
 ### 图标集合
 
 <ul class="icon-list">
-  <li v-for="name in $icon" :key="name">
-    <span>
+  <li v-for="name in $icon" class="flex-column-center" :key="name">
       <hj-icon :icon="name" size="32"></hj-icon>
       <span class="icon-name">{{name}}</span>
-    </span>
   </li>
 </ul>
 

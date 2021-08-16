@@ -214,7 +214,7 @@ export default {
     },
 
     blockClass() {
-      return ``;
+      return `demo-${ this.$router.currentRoute.path.split('/').pop() }`;
     },
 
     iconClass() {
