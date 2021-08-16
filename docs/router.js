@@ -27,6 +27,11 @@ Object.keys(_routes).forEach(key => {
     }
   })
 })
+routes.unshift({
+  path: '/',
+  name: 'index',
+  component: () => import(`./documents/index.md`)
+})
 const router = new VueRouter({
   mode: 'history',
   routes
