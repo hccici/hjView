@@ -10,6 +10,7 @@
     ]">
     <slot name="icon"></slot>
     <slot></slot>
+    <div v-if="loading" class="hj-button--loading flex-column-center">加载中...</div>
   </button>
 </template>
 
