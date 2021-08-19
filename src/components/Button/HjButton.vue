@@ -8,8 +8,8 @@
         'is-loading': loading
       }
     ]">
-    <slot name="icon"></slot>
-    <slot></slot>
+    <hj-icon v-if="icon!==''" :icon="icon"></hj-icon>
+    <span v-if="$slots.default"><slot></slot></span>
     <div v-if="loading" class="hj-button--loading flex-column-center">加载中...</div>
   </button>
 </template>
@@ -40,7 +40,11 @@ export default {
       default: 'right'
     },
     loading: Boolean,
-    disabled: Boolean
+    disabled: Boolean,
+    icon: {
+      type: String,
+      default: ''
+    }
   },
   computed: {
     buttonDisabled() {

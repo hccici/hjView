@@ -12,6 +12,6 @@ export default {
 
 <style lang="scss" scoped>
 .box {
-  flex: 5;
+  flex: 6;
 }
 </style>

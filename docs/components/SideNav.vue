@@ -30,6 +30,20 @@ export default {
   ul {
     list-style: none;
     padding: 0;
+    li {
+      margin: 5px 0;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        &:hover {
+          color: #409eff;
+        }
+        &.router-link-active {
+          color: #409eff;
+        }
+      }
+    }
   }
 }
 </style>

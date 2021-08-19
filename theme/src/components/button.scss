@@ -63,4 +63,21 @@
   &__circle {
     border-radius: 20px;
   }
+  .hj-icon + span {
+    margin-left: 5px;
+  }
+}
+.hj-button-group {
+  display: flex;
+  .hj-button:not(:last-child) {
+    margin-right: 1px;
+  }
+  .hj-button:first-child{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .hj-button:last-child{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
 }
