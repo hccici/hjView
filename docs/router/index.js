@@ -1,19 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import hljs from 'highlight.js';
+import config from './config'
 Vue.use(VueRouter)
-export const _routes = {
-  basic: [
-    {
-      name: 'Icon 图标',
-      key: 'icon'
-    },
-    {
-      name: 'Button 按钮',
-      key: 'button'
-    }
-  ]
-}
+export const _routes = config
 const routes = []
 Object.keys(_routes).forEach(key => {
   _routes[key].forEach(item => {
@@ -22,7 +12,7 @@ Object.keys(_routes).forEach(key => {
       routes.push({
         path: '/' + key,
         name: key,
-        component: () => import(`./documents/${key}.md`)
+        component: () => import(`../documents/${key}.md`)
       })
     }
   })
@@ -30,7 +20,7 @@ Object.keys(_routes).forEach(key => {
 routes.unshift({
   path: '/',
   name: 'index',
-  component: () => import(`./documents/index.md`)
+  component: () => import(`../documents/index.md`)
 })
 const router = new VueRouter({
   base: process.env.NODE_ENV === 'production'

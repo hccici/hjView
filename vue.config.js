@@ -40,7 +40,7 @@ module.exports = {
       ]
     }
   },
-  lintOnSave: false,
+  lintOnSave: false,// 目前使用eslint的话会报错，到时候用eslint的
   publicPath: process.env.NODE_ENV === 'production'
     ? '/hjView/'
     : '/'
