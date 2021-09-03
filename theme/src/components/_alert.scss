@@ -1,0 +1,37 @@
+@include b("alert") {
+  $padding: 10px;
+  $border-radius: 4px;
+
+  width: 100%;
+  padding: $padding;
+  margin: 0;
+  border-radius: $border-radius;
+
+  @include m("success") {
+    background-color: $--color-success;
+    @include when("light") {
+      background-color: $--color-success-light;
+    }
+  }
+
+  @include m("warning") {
+    background-color: $--color-warning;
+    @include when("light") {
+      background-color: $--color-warning-light;
+    }
+  }
+
+  @include m("danger") {
+    background-color: $--color-danger;
+    @include when("light") {
+      background-color: $--color-danger-light;
+    }
+  }
+  
+  @include m("info") {
+    background-color: $--color-info;
+    @include when("light") {
+      background-color: $--color-info-light;
+    }
+  }
+}

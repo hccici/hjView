@@ -1,3 +1,10 @@
-@import "./components/button.scss";
-@import "./components/icon.scss";
-@import "./components/display.scss";
+// 全局可以使用的minx和变量
+@import "./BEM/bem";
+@import "./common/color";
+// 公共
+@import "./common/reset";
+// 组件
+@import "./components/button";
+@import "./components/icon";
+@import "./components/display";
+@import "./components/alert";
