@@ -1,4 +1,5 @@
 const path = require('path')
+const packageName = require('./package.json').name;
 function resolve(dir) {
   return path.join(__dirname, dir)//path.join(__dirname)设置绝对路径
 }
@@ -38,10 +39,20 @@ module.exports = {
           ]
         },
       ]
-    }
+    },
+    output: {
+      library: `${packageName}-[name]`,
+      libraryTarget: 'umd',
+      jsonpFunction: `webpackJsonp_${packageName}`,
+    },
   },
   lintOnSave: false,// 目前使用eslint的话会报错，到时候用eslint的
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/hjView/'
-    : '/'
+  // publicPath: process.env.NODE_ENV === 'production' ? '/hjView/' : '/', // 加入乾坤需要在public-path中用另外一种方法设置
+  devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
 }
+
+
