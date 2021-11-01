@@ -1,13 +1,24 @@
 <template>
   <transition name="hj-alert-fade">
-    <div class="hj-alert" :class="[c_typeClass, center ? 'is-center' : '', 'is-' + effect]" v-show="visible"
-      role="alert">
+    <div
+      v-show="visible"
+      class="hj-alert"
+      :class="[c_typeClass, center ? 'is-center' : '', 'is-' + effect]"
+      role="alert"
+    >
       <!-- <i class="hj-alert__icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i> -->
       <div class="hj-alert__content">
-        <span class="hj-alert__title" :class="{'is-Bold': c_hasDescription}" v-if="title || $slots.title">
+        <span
+          v-if="title || $slots.title"
+          class="hj-alert__title"
+          :class="{'is-Bold': c_hasDescription}"
+        >
           <slot name="title">{{ title }}</slot>
         </span>
-        <p class="hj-alert__description" v-if="c_hasDescription">
+        <p
+          v-if="c_hasDescription"
+          class="hj-alert__description"
+        >
           <slot>{{ description }}</slot>
         </p>
         <!-- <i class="hj-alert__closebtn" :class="{ 'is-customed': closeText !== '', 'hj-icon-close': closeText === '' }"

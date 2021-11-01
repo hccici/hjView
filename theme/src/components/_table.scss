@@ -1,0 +1,31 @@
+// 公用
+@mixin td_th {
+  padding: 8px 16px;
+  border: 1px solid #e9e9e9;
+  text-align: left;
+}
+@include b("table") {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #e9e9e9;
+  @include e("thead") {
+    @include e("tr") {
+      @include e("th") {
+        background: #f7f7f7;
+        color: #5c6b77;
+        font-weight: 600;
+        white-space: nowrap;
+        @include td_th;
+      }
+    }
+  }
+  @include e("tbody") {
+    @include e("tr") {
+      @include e("td") {
+        @include td_th;
+      }
+    }
+  }
+}

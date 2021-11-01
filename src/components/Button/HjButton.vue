@@ -1,5 +1,8 @@
 <template>
-  <button class="hj-button" @click="handleClick" :disabled="buttonDisabled || loading" :class="[
+  <button
+    class="hj-button"
+    :disabled="buttonDisabled || loading"
+    :class="[
       `hj-button__${hjType}`,
       `hj-button__${size}`,
       `hj-button__${corner}`,
@@ -7,10 +10,20 @@
         'is-disabled': buttonDisabled,
         'is-loading': loading
       }
-    ]">
-    <hj-icon v-if="icon!==''" :icon="icon"></hj-icon>
-    <span v-if="$slots.default"><slot></slot></span>
-    <div v-if="loading" class="hj-button--loading flex-column-center">加载中...</div>
+    ]"
+    @click="handleClick"
+  >
+    <hj-icon
+      v-if="icon!==''"
+      :icon="icon"
+    />
+    <span v-if="$slots.default"><slot /></span>
+    <div
+      v-if="loading"
+      class="hj-button--loading flex-column-center"
+    >
+      加载中...
+    </div>
   </button>
 </template>
 

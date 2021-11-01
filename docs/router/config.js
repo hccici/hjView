@@ -14,5 +14,11 @@ export default {
       name: 'Alert 警告',
       key: 'alert'
     }
+  ],
+  form: [
+    {
+      name: 'Table 表格',
+      key: 'table'
+    }
   ]
 }
