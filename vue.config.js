@@ -47,7 +47,8 @@ module.exports = {
     },
   },
   lintOnSave: false,// 目前使用eslint的话会报错，到时候用eslint的
-  // publicPath: process.env.NODE_ENV === 'production' ? '/hjView/' : '/', // 加入乾坤需要在public-path中用另外一种方法设置
+  // 这里也要设置，即使__webpack_public_path__后面被设置了，这是因为在一些引用是被固定写在index.html里的也要加前缀。乾坤加载这部份资源应该能正确加载，后续引入才使用__webpack_public_path__设置的
+  publicPath: process.env.NODE_ENV === 'production' ? '/hjView/' : '/',
   devServer: {
     headers: {
       'Access-Control-Allow-Origin': '*',
