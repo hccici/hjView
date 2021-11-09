@@ -6,6 +6,8 @@ $--color-danger: #F56C6C !default;
 $--color-info: #909399 !default;
 // 基础颜色
 $--color-white: #FFFFFF !default;
+$--color-gray: #f5f5f5 !default;
+$--color-black: #333333 !default;
 // 状态颜色light
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;

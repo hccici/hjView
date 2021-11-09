@@ -1,0 +1,14 @@
+@include b("code-compare") {
+  min-width: 500px;
+  display: flex;
+  @include e("box") {
+    margin: 10px;
+    flex: 1;
+    background: $--color-gray;
+    font-size: 12px;
+    color: $--color-black;
+    @include e("modify") {
+      background-color: $--color-warning;
+    }
+  }
+}

@@ -20,5 +20,11 @@ export default {
       name: 'Table 表格',
       key: 'table'
     }
+  ],
+  others: [
+    {
+      name: 'Code 比较',
+      key: 'code-compare'
+    }
   ]
 }
