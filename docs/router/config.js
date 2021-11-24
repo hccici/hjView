@@ -25,6 +25,10 @@ export default {
     {
       name: 'Code 比较',
       key: 'code-compare'
+    },
+    {
+      name: '流程步骤',
+      key: 'process-step'
     }
   ]
 }
